@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Project Test1" verbose="1">
+     <listeners>
+        <listener class-name="listeners.CustomListeners"/>
+        <listener class-name="listeners.RetryListener"/>
+    </listeners>
+    <test name="test.TestItPlatform">
+<packages>
+    <package name="test"/>
+</packages>
+   <classes>
+       <class name="test.TestItPlatform">
+           <methods>
+               <include name="negativeTestLoginPasswordEmpty"/>
+           </methods>
+       </class>
+   </classes>
+    </test>
+</suite>
