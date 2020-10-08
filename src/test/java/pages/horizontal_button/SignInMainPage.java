@@ -1,4 +1,4 @@
-package pages;
+package pages.vertical;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -10,6 +10,7 @@ public class SignInMainPage {
     SelenideElement fieldLogin = $(byXpath("//input[@id='user_login']"));
     SelenideElement fieldPassword = $(byXpath("//input[@id='user_pass']"));
     SelenideElement pressButtonEnter = $(byXpath("//div/button[@name='submit']"));
+    SelenideElement buttonSignIn = $(byXpath("//span[text()='Sign in']"));
 
     @Step
     public void fillFielLogin (String login){
@@ -28,5 +29,17 @@ public class SignInMainPage {
         pressButtonEnter.click();
         logger.info("OK");
     }
+
+
+
+
+    @Step
+    public  void pressButtonSignIn(){
+        buttonSignIn.click();
+        logger.info("OK");
+
+
+    }
+
 
 }
