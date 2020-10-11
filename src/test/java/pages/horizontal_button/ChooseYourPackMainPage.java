@@ -1,4 +1,4 @@
-package pages.vertical;
+package pages.horizontal_button;
 import static common.CommonSteps.checkUrl;
 import static logger.CustomLogger.logger;
 
@@ -23,7 +23,6 @@ public class ChooseYourPackMainPage {
 
     @Step
     public void findControlText(String text) {
-        checkUrl("shedule");
         $(byXpath(controlText+"[text()='"+text+"']")).shouldBe(Condition.visible);
         logger.info("text " +text+" is visible");
     }

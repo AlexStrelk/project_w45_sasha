@@ -1,5 +1,6 @@
 package common;
 
+import data.Projects;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
@@ -7,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.switchTo;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
 

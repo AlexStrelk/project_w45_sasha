@@ -5,14 +5,16 @@
         <listener class-name="listeners.RetryListener"/>
     </listeners>
     <test name="test.TestItPlatform">
-<packages>
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="browserName" value="Firefox"/>
+        <packages>
     <package name="test"/>
 </packages>
    <classes>
-       <class name="test.TestItPlatform">
-           <methods>
+    <class name="test.TestItPlatform">
+         <methods>
                <include name="negativeTestLoginPasswordEmpty"/>
-           </methods>
+           </methods>-->
        </class>
    </classes>
     </test>

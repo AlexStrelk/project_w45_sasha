@@ -1,4 +1,4 @@
-package pages.vertical;
+package pages.horizontal_button;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -23,7 +23,6 @@ public class AchieveYourGoalMainPage {
 
     @Step
     public void findControlText(String text) {
-        checkUrl("special_offer");
         $(byXpath(controlText + "[text()='" + text + "']")).shouldBe(Condition.visible);
         logger.info("Ok");
 

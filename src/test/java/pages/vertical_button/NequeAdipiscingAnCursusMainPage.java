@@ -1,4 +1,4 @@
-package pages.horizontal;
+package pages.vertical_button;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -21,7 +21,6 @@ public class NequeAdipiscingAnCursusMainPage {
 
     @Step
     public void checkControlText(String text){
-        checkUrl("neque-adipiscing-an-cursus");
         $(byXpath(controlText+"[text()='"+text+"']")).shouldBe(Condition.visible);
         logger.info("control text "+ text + " is visible");
     }

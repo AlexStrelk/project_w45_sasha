@@ -1,4 +1,4 @@
-package pages.vertical;
+package pages.horizontal_button;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;

@@ -1,4 +1,4 @@
-package pages.vertical;
+package pages.horizontal_button;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -15,7 +15,6 @@ public class YourObjectMainPage {
 
     @Step
     public void findControlText(String text) {
-        checkUrl("5element");
         $(byXpath(controlText + "[text()='" + text + "']")).shouldBe(Condition.visible);
         logger.info("Element " + text + " is visible");
 
