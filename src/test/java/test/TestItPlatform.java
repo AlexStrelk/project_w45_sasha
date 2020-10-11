@@ -1,18 +1,16 @@
 package test;
 
 import com.codeborne.selenide.Selenide;
+import data.Projects;
 import data.UserItPlatforma;
 import org.testng.annotations.DataProvider;
-import runner.Debug;
-import data.Projects;
 import org.testng.annotations.Test;
+import runner.Debug;
 import utils.ExcelUtils;
 
-import java.io.IOException;
-
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 import static common.CommonSteps.checkUrl;
-import static utils.SimpleExcelWriterExample.writeToExcelFile;
 
 
 public class TestItPlatform extends Debug {
@@ -29,8 +27,6 @@ public class TestItPlatform extends Debug {
 
     @Test(priority = 1)
     public void openMainPageItPlaformaAndLogin() {
-
-
         open(Projects.IT_PLATFORMA_MAIN_PAGE.getUrl());
         signInMainPage.pressButtonSignIn();
         signInMainPage.fillFielLogin(UserItPlatforma.login.getValue());
@@ -48,8 +44,6 @@ public class TestItPlatform extends Debug {
         signInMainPage.fillFieldPassword("");
         signInMainPage.pressSubmit();
         accountMainPage.checkAccountName();
-
-
     }
 
     @Test(priority = 3)
@@ -127,13 +121,12 @@ public class TestItPlatform extends Debug {
         checkUrl("interdum-magna-augue-eget");
     }
 
-
     @Test(dataProvider = "testObjArray1")
-    public void checkSearchField(String var1, String var2) throws IOException {
+    public void checkSearchField(String var1) {
         open(Projects.IT_PLATFORMA_MAIN_PAGE.getUrl());
         itPlatformaMainPage.fillSearchField(var1);
         searchPage.searchControlText("Litora torqent per conubia");
         checkUrl("Litora+torqent+per+conubia");
     }
-}
 
+}
